@@ -1,6 +1,269 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#3F51B5</color>
-    <color name="colorPrimaryDark">#303F9F</color>
-    <color name="colorAccent">#FF4081</color>
+    <color name="red">#FF0000</color>
+    <color name="white">#FFFFFF</color>
+    <color name="black">#000000</color>
+    <color name="gray">#AFB4B9</color>
+    <color name="text_gray">#ff999999</color>
+    <color name="whiteSmoke">#FAFAFA</color>
+    <color name="color_transparent">#00000000</color>
+    <color name="text_first_level_color">#555f6e</color>
+    <color name="whitesmoke">#FAFAFA</color>
+
+    <color name="background_first_level_color">#FAFAFA</color>
+    <color name="background_second_level_color">#F5F5F5</color>
+    <color name="background_third_level_color">#f0f0f0</color>
+
+    <color name="btn_green">#82BE1E</color>
+    <color name="btn_green_press">#FF6CAB1F</color>
+
+    <color name="color_optimal">#FF17E269</color>
+    <color name="color_worst">#FFFFB446</color>
+
+    <color name="ripple_grey">#585858</color>
+    <color name="ripple_white">#FFFFFF</color>
+
+    <!-- for locker -->
+    <color name="patch_err">#F4511D</color>
+    <color name="ripple_circle_background">#30ffffff</color>
+    <color name="ripple_material_dark">#4dffffff</color>
+    <color name="ripple_circle_text">#4b5564</color>
+    <color name="title_text_color">#FF565656</color>
+    <color name="detail_text_color">#B3565656</color>
+    <color name="text_content_color">#FF1D1B51</color>
+    <color name="text_second_level_color">#8791a0</color>
+    <color name="game_bg_color">#EBEBEB</color>
+    <color name="text_locker_guide_title">#FF494D54</color>
+    <!-- end locker -->
+    <!-- for patten locker -->
+    <color name="text_third_level_color">#FF00C858</color>
+    <!-- end locker -->
+
+    <!-- for junk clean-->
+    <color name="color_D9D9D9">#D9D9D9</color>
+    <color name="color_4A90E2">#4A90E2</color>
+    <color name="color_6E6E6E">#6E6E6E</color>
+    <!-- end junk clean-->
+
+    <color name="color_F5A623">#F5A623</color>
+
+    <!--quick charge start-->
+    <color name="charging_font_color">#66ffffff</color>
+    <color name="color_33FFFFFF">#33FFFFFF</color>
+    <color name="main_green">#ff32be1e</color>
+    <!--quick charge end-->
+
+    <!--battery save start-->
+    <color name="dump_energy_color">#B8FFFFFF</color>
+    <color name="recomm_clean_color">#7A1D1B51</color>
+    <color name="package_name_color">#E11D1B51</color>
+    <!--battery save end-->
+
+    <!--splash page start-->
+    <color name="color_half_transparent">#7f000000</color>
+    <!--splash page end-->
+
+    <!--instant battery start-->
+    <!--instant battery end-->
+
+    <!--network status start-->
+    <!--network status end-->
+
+    <color name="color_FF4E586A">#FF4E586A</color>
+    <color name="color_FF17E269">#FF17E269</color>
+    <color name="color_3217E269">#3217E269</color>
+    <color name="color_FFFFB446">#FFFFB446</color>
+    <color name="color_FF00B8B3">#FF00B8B3</color>
+    <color name="color_FF1D1B51">#FF1D1B51</color>
+    <color name="color_8EFFFFFF">#8EFFFFFF</color>
+    <color name="color_FFE54646">#FFE54646</color>
+    <color name="color_FF4C323B">#FF4C323B</color>
+    <color name="color_E01D1B51">#E01D1B51</color>
+    <color name="color_18000000">#18000000</color>
+    <color name="color_B8FFFFFF">#B8FFFFFF</color>
+    <color name="color_0A433EBA">#0A433EBA</color>
+    <color name="color_7B1D1B51">#7B1D1B51</color>
+    <color name="color_521D1B51">#521D1B51</color>
+    <color name="color_E0505A6C">#E0505A6C</color>
+    <color name="color_8F4E586A">#8F4E586A</color>
+    <color name="color_2F4E586A">#2f4E586A</color>
+    <color name="color_7AFD5B5B">#7AFD5B5B</color>
+    <color name="color_DEFFFFFF">#DEFFFFFF</color>
+    <color name="color_E11D1B51">#E11D1B51</color>
+    <color name="color_CDFFFFFF">#CDFFFFFF</color>
+    <color name="color_FFEAEAEA">#FFEAEAEA</color>
+    <color name="color_FF15CF60">#FF15CF60</color>
+    <color name="color_FFFF9900">#FFFF9900</color>
+    <color name="color_FF8791A0">#FF8791A0</color>
+    <color name="color_B3000000">#B3000000</color>
+    <color name="color_FF072D3C">#FF072D3C</color>
+    <color name="color_FF0E8F54">#FF0E8F54</color>
+    <color name="color_7AFFFFFF">#7AFFFFFF</color>
+    <color name="color_FF17E3E0">#FF17E3E0</color>
+    <color name="color_E0FFFFFF">#E0FFFFFF</color>
+    <color name="color_29FFFFFF">#29FFFFFF</color>
+    <color name="color_99313A3D">#99313A3D</color>
+    <color name="color_FFA6A6A6">#FFA6A6A6</color>
+    <color name="color_FF084C43">#FF084C43</color>
+    <color name="color_FFF0F0FA">#FFF0F0FA</color>
+    <color name="color_52F0F0FC">#52F0F0FC</color>
+    <color name="color_3DFFFFFF">#3DFFFFFF</color>
+    <color name="color_FFF04158">#FFF04158</color>
+    <color name="color_FFDD3B51">#FFDD3B51</color>
+    <color name="color_FF2B3A68">#FF2B3A68</color>
+    <color name="color_FF00C858">#FF00C858</color>
+    <color name="color_E0FFB446">#E0FFB446</color>
+    <color name="color_7A00C858">#7A00C858</color>
+    <color name="color_FF00B851">#FF00B851</color>
+    <color name="color_FF505A6C">#FF505A6C</color>
+    <color name="color_7F505A6C">#7F505A6C</color>
+    <color name="color_FF5B7CD6">#FF5B7CD6</color>
+    <color name="color_FF00C8C3">#FF00C8C3</color>
+    <color name="color_FFFD5B5B">#FFFD5B5B</color>
+    <color name="color_159CA1AB">#159CA1AB</color>
+    <color name="color_8FFFFFFF">#8FFFFFFF</color>
+    <color name="color_FFF2F6FC">#FFF2F6FC</color>
+    <color name="color_3DE5466C">#3DE5466C</color>
+    <color name="color_3D56B2BA">#3D56B2BA</color>
+    <color name="color_FFF8F8F8">#FFF8F8F8</color>
+    <color name="color_8F494D54">#8F494D54</color>
+    <color name="color_FFB1C7F0">#FFB1C7F0</color>
+    <color name="color_3D4E586A">#3D4E586A</color>
+    <color name="color_8E4E586A">#8E4E586A</color>
+    <color name="color_52FFFFFF">#52FFFFFF</color>
+    <color name="color_34FFFFFF">#34FFFFFF</color>
+
+    <color name="color_B7FFFFFF">#B7FFFFFF</color>
+    <color name="color_144E586A">#144E586A</color>
+    <color name="color_0A65C8EF">#0A65C8EF</color>
+    <color name="color_E04E586A">#E04E586A</color>
+    <color name="color_E05B7CD6">#E05B7CD6</color>
+    <color name="color_3E4E586A">#3E4E586A</color>
+    <color name="color_E14E586A">#E14E586A</color>
+    <color name="color_FF22375F">#FF22375F</color>
+    <color name="color_FF081220">#FF081220</color>
+    <color name="color_14FFFFFF">#14FFFFFF</color>
+    <color name="color_80323232">#80323232</color>
+    <color name="color_904E586A">#904E586A</color>
+    <color name="color_FF646D7E">#FF646D7E</color>
+    <color name="color_FFF9FDFF">#FFF9FDFF</color>
+    <color name="color_CCFFFFFF">#CCFFFFFF</color>
+
+    <color name="color_9F000000">#9F000000</color>
+    <color name="color_FF5372C5">#FF5372C5</color>
+    <color name="color_80FFFFFF">#80FFFFFF</color>
+    <color name="color_E0000000">#E0000000</color>
+    <color name="color_5B7CD6">#5B7CD6</color>
+    <color name="color_B3FFFFFF">#B3FFFFFF</color>
+    <color name="color_FF122038">#FF122038</color>
+    <color name="color_FFFFFFFF">#FFFFFFFF</color>
+    <color name="color_14000000">#14000000</color>
+    <color name="color_1465C8EF">#1465C8EF</color>
+    <color name="color_B11F1F1F">#B11F1F1F</color>
+    <color name="color_1FFFFFFF">#1FFFFFFF</color>
+    <color name="color_FF00ACEB">#FF00ACEB</color>
+    <color name="color_FF2665DD">#FF2665DD</color>
+    <color name="color_B2FFFFFF">#B2FFFFFF</color>
+    <color name="color_2917E269">#2917E269</color>
+    <color name="color_CC162A42">#CC162A42</color>
+    <color name="color_0AFFFFFF">#0AFFFFFF</color>
+    <color name="color_FF0C834D">#FF0C834D</color>
+    <color name="color_006FBFE7">#006FBFE7</color>
+    <color name="color_29FFB446">#29FFB446</color>
+    <color name="color_3D000000">#3D000000</color>
+    <color name="color_CC07142C">#CC07142C</color>
+    <color name="color_7A07142C">#7A07142C</color>
+    <color name="color_5207142C">#5207142C</color>
+    <color name="color_524E586A">#524E586A</color>
+    <color name="color_ff5064ff">#FF5064FF</color>
+    <color name="color_ff91c800">#FF91C800</color>
+    <color name="color_ff06c95b">#06C95B</color>
+    <color name="color_FFE2E2E2">#FFE2E2E2</color>
+    <color name="color_FFF5F5F5">#FFF5F5F5</color>
+    <color name="color_FF303D55">#FF303D55</color>
+    <color name="color_99000000">#99000000</color>
+    <color name="color_3D2665DD">#3D2665DD</color>
+    <color name="color_CB07142C">#CB07142C</color>
+    <color name="color_B9FFFFFF">#B9FFFFFF</color>
+    <color name="color_FFF53838">#FFF53838</color>
+
+    <color name="color_0A1E50B0">#0A1EF0B0</color>
+    <color name="color_B8000000">#B8000000</color>
+    <color name="color_66000000">#66000000</color>
+
+    <color name="color_1F000000">#1F000000</color>
+    <color name="color_0A65C8F0">#0A65C8F0</color>
+    <color name="color_A3FFFFFF">#A3FFFFFF</color>
+    <color name="color_0A2665DD">#0A2665DD</color>
+    <color name="color_66FFFFFF">#66FFFFFF</color>
+    <color name="color_B8F9FDFF">#B8F9FDFF</color>
+    <color name="color_80000000">#80000000</color>
+    <color name="color_0B000000">#0B000000</color>
+    <color name="color_FF000000">#FF000000</color>
+
+    <color name="color_FF08B5F3">#FF08B5F3</color>
+    <color name="color_CC072D3C">#CC072D3C</color>
+    <color name="color_66072D3C">#66072D3C</color>
+    <color name="color_1f072D3C">#1f072D3C</color>
+    <color name="color_FFEAECED">#FFEAECED</color>
+    <color name="color_7A000000">#7A000000</color>
+    <color name="color_FF00A9FF">#FF00A9FF</color>
+    <color name="color_FF0070FF">#FF0070FF</color>
+    <color name="color_FF009DFF">#FF009DFF</color>
+
+    <color name="color_476082E6">#476082E6</color>
+    <color name="color_FF2E4E5B">#FF2E4E5B</color>
+    <color name="color_1407142C">#1407142C</color>
+    <color name="color_FF052531">#ff052531</color>
+
+    <color name="color_FF572CDB">#FF572CDB</color>
+    <color name="color_FFFFC60A">#FFFFC60A</color>
+    <color name="color_FF2C85DB">#FF2C85DB</color>
+    <color name="color_FFE31A">#FFE31A</color>
+    <color name="color_FFBE1E1E">#FFBE1E1E</color>
+    <color name="color_3CFFFFFF">#3CFFFFFF</color>
+    <color name="color_CC070000">#CC070000</color>
+    <color name="color_FF394356">#FF394356</color>
+    <color name="color_3DFFC60A">#3DFFC60A</color>
+    <color name="color_7FFFFFFF">#7FFFFFFF</color>
+
+    <color name="color_FA072D3C">#FA072D3C</color>
+    <color name="color_FF05222E">#FF05222E</color>
+    <color name="color_FF00C457">#FF00C457</color>
+    <color name="color_2A000000">#2A000000</color>
+    <color name="color_65FFFFFF">#65FFFFFF</color>
+    <color name="color_FFC1C6D2">#FFC1C6D2</color>
+
+    <color name="color_7B07142C">#7B07142C</color>
+
+    <color name="color_00092E3D">#00092E3D</color>
+    <color name="color_DF000E14">#DF000E14</color>
+
+    <color name="color_FF8CC3CF">#FF8CC3CF</color>
+    <color name="color_FF02E01F">#FF02E01F</color>
+
+    <color name="color_1EFFFFFF">#1EFFFFFF</color>
+    <color name="color_8F07142C">#8F07142C</color>
+    <color name="color_FFE1E7F1">#FFE1E7F1</color>
+    <color name="color_50FFFFFF">#50FFFFFF</color>
+    <color name="color_FF191B1E">#FF191B1E</color>
+    <color name="color_CC27335D">#CC27335D</color>
+    <color name="color_A2FFFFFF">#A2FFFFFF</color>
+    <color name="color_1465C8F0">#1465C8F0</color>
+
+    <color name="color_FFFF926B">#FFFF926B</color>
+    <color name="color_7BFFFFFF">#7BFFFFFF</color>
+    <color name="color_FFE13A3B">#FFE13A3B</color>
+
+    <color name="color_FF0A7846">#FF0A7846</color>
+    <color name="color_51000000">#51000000</color>
+    <color name="color_8F000000">#8F000000</color>
+    <color name="color_8F072D3C">#8F072D3C</color>
+    <color name="color_7F000000">#7F000000</color>
+    <color name="color_B807142C">#B807142C</color>
+    <color name="color_FF070000">#FF070000</color>
+    <color name="color_D6000000">#D6000000</color>
+    <color name="color_3CF53838">#3CF53838</color>
 </resources>
+
+
