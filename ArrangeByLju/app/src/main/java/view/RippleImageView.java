@@ -5,7 +5,6 @@ import android.content.res.TypedArray;
 import android.os.Handler;
 import android.os.Message;
 import android.util.AttributeSet;
-import android.util.Log;
 import android.view.animation.AlphaAnimation;
 import android.view.animation.Animation;
 import android.view.animation.AnimationSet;
@@ -135,12 +134,12 @@ public class RippleImageView extends RelativeLayout {
         as.addAnimation(aa);
         return as;
     }
+
     private static int dip2px(Context context, float dipValue) {
         final float scale = context.getResources().getDisplayMetrics().density;
         return (int) (dipValue * scale + 0.5f);
     }
 
-    //============================对外暴露的public方法=========================================
     /**
      * 开始水波纹动画
      */
