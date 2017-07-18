@@ -1,4 +1,4 @@
-package util;
+package com.dayu.singapp.util;
 
 import android.app.Activity;
 import android.content.ContentResolver;
@@ -24,7 +24,7 @@ import android.view.WindowManager;
 import java.io.File;
 import java.lang.reflect.Method;
 
-import common.ApplicationEx;
+import com.dayu.singapp.common.ApplicationEx;
 
 /**
  * Created by luowp on 2016/7/12.

@@ -1,8 +1,8 @@
-package common;
+package com.dayu.singapp.common;
 
 import android.app.Application;
 import android.content.Context;
-import android.content.SharedPreferences;
+
 import java.util.concurrent.ConcurrentLinkedQueue;
 /**
  * Created by zhangjinwei on 2017/5/10.

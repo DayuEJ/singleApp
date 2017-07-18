@@ -1,4 +1,4 @@
-package view;
+package com.dayu.singapp.view;
 
 import android.content.Context;
 import android.content.res.TypedArray;
@@ -14,7 +14,7 @@ import android.widget.RelativeLayout;
 
 import com.dayu.singapp.R;
 
-import util.DeviceUtil;
+import com.dayu.singapp.util.DeviceUtil;
 
 public class RippleImageView extends RelativeLayout {
 

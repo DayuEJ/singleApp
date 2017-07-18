@@ -6,13 +6,13 @@
     android:layout_height="match_parent"
     android:background="@color/color_FF072D3C"
     android:gravity="center"
-    tools:context="com.dayu.singapp.MainActivity">
+    tools:context="com.dayu.singapp.activity.MainActivity">
 
     <TextView
-        android:id="@+id/tv_ui_control"
+        android:id="@+id/tv_action_heart"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textSize="20sp"
-        android:text="@string/text_ui_control"
+        android:text="@string/ui_control_heart_view"
         android:textColor="@color/white"/>
 </LinearLayout>
