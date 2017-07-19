@@ -24,4 +24,8 @@ public class BaseActivity extends Activity {
         }
         return null;
     }
+
+    public void doBackPressed(){
+        onBackPressed();
+    }
 }

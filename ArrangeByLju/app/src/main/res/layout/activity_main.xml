@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/color_FF072D3C"
-    android:gravity="center"
+    android:orientation="vertical"
     tools:context="com.dayu.singapp.activity.MainActivity">
 
     <TextView
@@ -13,6 +13,15 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textSize="20sp"
+        android:layout_marginTop="50dp"
         android:text="@string/ui_control_heart_view"
+        android:textColor="@color/white"/>
+
+    <TextView
+        android:id="@+id/tv_layout_param"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:text="test"
         android:textColor="@color/white"/>
 </LinearLayout>
