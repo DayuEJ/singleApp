@@ -32,15 +32,13 @@ import android.view.ViewGroup.LayoutParams;
 import android.view.animation.Interpolator;
 import android.widget.LinearLayout;
 
+import com.dayu.singapp.R;
+import com.dayu.singapp.util.DeviceUtil;
+import com.dayu.singapp.util.ResourceUtil;
+import com.dayu.singapp.view.widget.adapters.WheelViewAdapter;
+
 import java.util.LinkedList;
 import java.util.List;
-
-import call_app.notification.light.R;
-import call_app.notification.light.util.DeviceUtil;
-import call_app.notification.light.util.ResourceUtil;
-import call_app.notification.light.view.wheel.widget.adapters.WheelViewAdapter;
-
-
 /**
  * Numeric wheel view.
  * 

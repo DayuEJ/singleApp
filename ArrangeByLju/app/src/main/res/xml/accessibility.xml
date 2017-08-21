@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<accessibility-service
+   xmlns:android="http://schemas.android.com/apk/res/android"
+   android:accessibilityFeedbackType="feedbackGeneric"
+   android:canPerformGestures="true"
+   android:canRequestTouchExplorationMode="true"
+   android:canRetrieveWindowContent="true"
+   android:description="@string/text_hello_world"
+   android:notificationTimeout="100"/>
+
+    <!--description 设置服务的描述-->
+    <!--android:accessibilityEventTypes 配置监听的辅助事件 typeNotificationStateChanged通知变化事件 typeWindowStateChanged界面变化事件-->
+    <!--android:packageNames 监听应用的包名  多个应用用逗号分隔-->
+    <!--android:accessibilityFeedbackType 设置应用的反馈方式-->
+    <!--android:canPerformGestures="true"  辅助服务是否支持手势-->
+    <!--android:canRequestTouchExplorationMode="true" 辅助服务是否 支持触摸模式 大声说话-->
+    <!--android:canRetrieveWindowContent="true" 视图层级的隐式的暴露私有用户信息给用户 如果不配置这个设置getSource 会失败-->
+    <!--notificationTimeout  响应的时间设置-->
+    <!--feedbackSpoken 语音反馈-->
+    <!--feedbackHaptic 触感反馈-->
+    <!--feedbackAudible 声音反馈-->
+    <!--feedbackVisual 视觉反馈-->
+    <!--feedbackGeneric 通用反馈-->
+    <!--feedbackAllMask 所有以上的反馈-->

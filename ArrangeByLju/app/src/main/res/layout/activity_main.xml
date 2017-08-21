@@ -10,18 +10,50 @@
 
     <TextView
         android:id="@+id/tv_action_heart"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:textSize="20sp"
-        android:layout_marginTop="50dp"
+        android:minHeight="60dp"
+        android:gravity="center"
+        android:background="@color/btn_green"
         android:text="@string/ui_control_heart_view"
         android:textColor="@color/white"/>
 
     <TextView
         android:id="@+id/tv_layout_param"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:minHeight="60dp"
         android:textSize="20sp"
-        android:text="test"
+        android:text="LayoutParams"
+        android:gravity="center"
+        android:background="@color/btn_green"
+        android:textColor="@color/white"/>
+
+    <TextView
+        android:id="@+id/tv_layout_present"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="60dp"
+        android:textSize="20sp"
+        android:text="Rush Present"
+        android:gravity="center"
+        android:background="@color/btn_green"
+        android:textColor="@color/white"/>
+
+    <com.dayu.singapp.view.ViewConstructor
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:background="@color/red"/>
+
+    <TextView
+        android:id="@+id/tv_install_list"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="60dp"
+        android:textSize="20sp"
+        android:text="install list"
+        android:gravity="center"
+        android:background="@color/btn_green"
         android:textColor="@color/white"/>
 </LinearLayout>
