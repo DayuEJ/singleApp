@@ -1,15 +1,10 @@
 package com.dayu.singapp.activity;
-import android.app.Activity;
-import android.content.ActivityNotFoundException;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.LinearLayout;
-
-import com.dayu.singapp.BuildConfig;
 import com.dayu.singapp.R;
 import com.dayu.singapp.util.DeviceUtil;
-import com.dayu.singapp.util.LogUtil;
 
 public class MainActivity extends BaseActivity implements View.OnClickListener{
     private final String TAG = "MainActivity";

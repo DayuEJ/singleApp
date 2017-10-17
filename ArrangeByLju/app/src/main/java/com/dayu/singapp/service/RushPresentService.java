@@ -11,15 +11,15 @@ import com.dayu.singapp.util.LogUtil;
 
 /**
  * Created by Ljy on 2017/8/9.
+ *  onmyoji auto hang up  阴阳师自动挂机
  */
-
 public class RushPresentService extends AccessibilityService {
     private final String TAG = "rush_present";
-    private final String MONITOR_PACKAGENAME = "com.netease.onmyoji";//阴阳师的包名
+    private final String MONITOR_PACKAGENAME = "com.daimajia.gold";
+    private final String TAG_VIEW_TEXT = "Android";
     @Override
     protected void onServiceConnected() {
-        //服务授权成功
-        LogUtil.d(TAG, "onServiceConnected");
+        //服务授权成
         AccessibilityServiceInfo serviceInfo = new AccessibilityServiceInfo();
         serviceInfo.eventTypes = AccessibilityEvent.TYPES_ALL_MASK;
         serviceInfo.feedbackType = AccessibilityServiceInfo.FEEDBACK_GENERIC;
@@ -32,10 +32,12 @@ public class RushPresentService extends AccessibilityService {
 
     @Override
     public void onAccessibilityEvent(AccessibilityEvent event) {
-        //接受事件 接受的事件是经过过滤的 过滤是在配置工作时设定的
+        //这里接收的AccessibilityEvent 是已经经过过滤的 过滤条件在配置ServiceInfo时指定
         AccessibilityNodeInfo accessibilityNodeInfo = event.getSource();
-        if (accessibilityNodeInfo.getPackageName().equals(MONITOR_PACKAGENAME))
-        accessibilityNodeInfo.findAccessibilityNodeInfosByText("");
+        if (accessibilityNodeInfo.getPackageName().equals(MONITOR_PACKAGENAME)){
+            accessibilityNodeInfo.findAccessibilityNodeInfosByText(TAG_VIEW_TEXT);
+            accessibilityNodeInfo.performAction(AccessibilityNodeInfo.ACTION_CLICK);
+        }
     }
 
     @Override
