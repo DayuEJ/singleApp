@@ -12,6 +12,12 @@ public class Book implements Parcelable {
     public String bookName;
     public int price;
 
+    public Book(int id, String bookName, int price){
+        this.id = id;
+        this.bookName = bookName;
+        this.price = price;
+    }
+
     @Override
     public int describeContents() {
         return 0;// 几乎都返回0 只有在对象中含有文件描述符的时候 返回1

@@ -53,8 +53,11 @@ public class MainActivity extends BaseActivity implements View.OnClickListener{
                 break;
 
             case R.id.tv_install_list:
-                Intent intent_install = new Intent(MainActivity.this, InstallPackageNameActivity.class);
-                startActivity(intent_install);
+//                Intent intent_install = new Intent(MainActivity.this, InstallPackageNameActivity.class);
+//                startActivity(intent_install);
+                Intent intent_parcelable = new Intent(MainActivity.this, ParcelableActivity.class);
+                startActivity(intent_parcelable);
+
                 break;
 
             default:

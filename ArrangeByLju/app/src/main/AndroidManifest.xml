@@ -20,6 +20,14 @@
             android:launchMode="singleTask"
             android:screenOrientation="portrait"/>
 
+        <activity android:name=".activity.ParcelableActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"/>
+
+        <activity android:name=".activity.ParcelableActivity1"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"/>
+
         <service android:name=".service.RushPresentService"
             android:process=":service_accessibility"
             android:label = "@string/accessibility_service_label"
