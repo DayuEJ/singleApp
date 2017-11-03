@@ -16,6 +16,16 @@ public class BaseActivity extends Activity {
         //unnecessary setContentView();
     }
 
+    final public void bindClick(int resId, View.OnClickListener listener){
+        findViewById(resId).setOnClickListener(listener);
+    }
+
+    final public void bindClicks(int[] resList, View.OnClickListener listener){
+        for (int resId : resList){
+            bindClick(resId, listener);
+        }
+    }
+
     @SuppressWarnings("unchecked")
     protected <T extends View> T findViewById(Class<T> type, int res){
         View target  = findViewById(res);

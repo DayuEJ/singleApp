@@ -55,16 +55,18 @@ public class MainActivity extends BaseActivity implements View.OnClickListener{
             case R.id.tv_install_list:
 //                Intent intent_install = new Intent(MainActivity.this, InstallPackageNameActivity.class);
 //                startActivity(intent_install);
-                Intent intent_parcelable = new Intent(MainActivity.this, ParcelableActivity.class);
-                startActivity(intent_parcelable);
 
+//                Intent intent_parcelable = new Intent(MainActivity.this, ParcelableActivity.class);
+//                startActivity(intent_parcelable);
+
+                Intent intent_bezier = new Intent(MainActivity.this, BezierShowActivity.class);
+                startActivity(intent_bezier);
                 break;
 
             default:
                 break;
         }
     }
-    
     //// FIXME: 2017/8/21  为什么要一定要采用 startActivityForResult的启动方式
 //    public void showAccessibilitySettings(Activity activity) {
 //        Intent intent = new Intent("android.settings.ACCESSIBILITY_SETTINGS");
