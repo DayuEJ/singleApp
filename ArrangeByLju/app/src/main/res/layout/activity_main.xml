@@ -52,7 +52,18 @@
         android:layout_height="wrap_content"
         android:minHeight="60dp"
         android:textSize="20sp"
-        android:text="install list"
+        android:text="Quad Bezier"
+        android:gravity="center"
+        android:background="@color/btn_green"
+        android:textColor="@color/white"/>
+
+    <TextView
+        android:id="@+id/tv_cubic_bezier"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="60dp"
+        android:textSize="20sp"
+        android:text="Cubic Bezier"
         android:gravity="center"
         android:background="@color/btn_green"
         android:textColor="@color/white"/>

@@ -9,7 +9,7 @@ import com.dayu.singapp.R;
  * Created by Ljy on 2017/11/3.
  */
 
-public class BezierShowActivity extends BaseActivity {
+public class BezierQuadShowActivity extends BaseActivity {
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {

@@ -22,6 +22,7 @@ public class MainActivity extends BaseActivity implements View.OnClickListener{
         findViewById(R.id.tv_layout_param).setOnClickListener(this);
         findViewById(R.id.tv_layout_present).setOnClickListener(this);
         findViewById(R.id.tv_install_list).setOnClickListener(this);
+        findViewById(R.id.tv_cubic_bezier).setOnClickListener(this);
     }
 
     private void testLayoutParams(){
@@ -59,8 +60,13 @@ public class MainActivity extends BaseActivity implements View.OnClickListener{
 //                Intent intent_parcelable = new Intent(MainActivity.this, ParcelableActivity.class);
 //                startActivity(intent_parcelable);
 
-                Intent intent_bezier = new Intent(MainActivity.this, BezierShowActivity.class);
+                Intent intent_bezier = new Intent(MainActivity.this, BezierQuadShowActivity.class);
                 startActivity(intent_bezier);
+                break;
+
+            case R.id.tv_cubic_bezier:
+                Intent intent_cubic = new Intent(MainActivity.this, BezierCubicShowActivity.class);
+                startActivity(intent_cubic);
                 break;
 
             default:

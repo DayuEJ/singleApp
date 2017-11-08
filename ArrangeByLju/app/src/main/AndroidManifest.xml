@@ -29,7 +29,11 @@
             android:screenOrientation="portrait"/>
 
 
-        <activity android:name=".activity.BezierShowActivity"
+        <activity android:name=".activity.BezierQuadShowActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"/>
+
+        <activity android:name=".activity.BezierCubicShowActivity"
             android:launchMode="singleTask"
             android:screenOrientation="portrait"/>
 
