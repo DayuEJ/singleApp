@@ -32,10 +32,6 @@ import android.content.Context;
 import dalvik.system.DexFile;
 
 final class ModelInfo {
-	//////////////////////////////////////////////////////////////////////////////////////
-	// PRIVATE METHODS
-	//////////////////////////////////////////////////////////////////////////////////////
-
 	private Map<Class<? extends Model>, TableInfo> mTableInfos = new HashMap<Class<? extends Model>, TableInfo>();
 	private Map<Class<?>, TypeSerializer> mTypeSerializers = new HashMap<Class<?>, TypeSerializer>() {
 		{
@@ -45,10 +41,6 @@ final class ModelInfo {
 			put(File.class, new FileSerializer());
 		}
 	};
-
-	//////////////////////////////////////////////////////////////////////////////////////
-	// CONSTRUCTORS
-	//////////////////////////////////////////////////////////////////////////////////////
 
 	public ModelInfo(Configuration configuration) {
 		if (!loadModelFromMetaData(configuration)) {
@@ -63,10 +55,6 @@ final class ModelInfo {
 		Log.i("ModelInfo loaded.");
 	}
 
-	//////////////////////////////////////////////////////////////////////////////////////
-	// PUBLIC METHODS
-	//////////////////////////////////////////////////////////////////////////////////////
-
 	public Collection<TableInfo> getTableInfos() {
 		return mTableInfos.values();
 	}
@@ -78,10 +66,6 @@ final class ModelInfo {
 	public TypeSerializer getTypeSerializer(Class<?> type) {
 		return mTypeSerializers.get(type);
 	}
-
-	//////////////////////////////////////////////////////////////////////////////////////
-	// PRIVATE METHODS
-	//////////////////////////////////////////////////////////////////////////////////////
 
 	private boolean loadModelFromMetaData(Configuration configuration) {
 		if (!configuration.isValid()) {

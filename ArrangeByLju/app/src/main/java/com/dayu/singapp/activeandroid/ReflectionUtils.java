@@ -29,9 +29,6 @@ import android.content.pm.ApplicationInfo;
 import android.content.pm.PackageManager;
 
 public final class ReflectionUtils {
-	//////////////////////////////////////////////////////////////////////////////////////
-	// PUBLIC METHODS
-	//////////////////////////////////////////////////////////////////////////////////////
 
 	public static boolean isModel(Class<?> type) {
 		return isSubclassOf(type, Model.class) && (!Modifier.isAbstract(type.getModifiers()));

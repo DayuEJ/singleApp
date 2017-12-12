@@ -1,21 +1,5 @@
 package com.dayu.singapp.activeandroid;
 
-/*
- * Copyright (C) 2010 Michael Pardo
- *
- * Licensed under the Apache License, Version 2.0 (the "License");
- * you may not use this file except in compliance with the License.
- * You may obtain a copy of the License at
- *
- *      http://www.apache.org/licenses/LICENSE-2.0
- *
- * Unless required by applicable law or agreed to in writing, software
- * distributed under the License is distributed on an "AS IS" BASIS,
- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- * See the License for the specific language governing permissions and
- * limitations under the License.
- */
-
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
@@ -27,29 +11,16 @@ public class Configuration {
     public final static String SQL_PARSER_LEGACY = "legacy";
     public final static String SQL_PARSER_DELIMITED = "delimited";
 
-	//////////////////////////////////////////////////////////////////////////////////////
-	// PRIVATE MEMBERS
-	//////////////////////////////////////////////////////////////////////////////////////
-
 	private Context mContext;
 	private String mDatabaseName;
 	private int mDatabaseVersion;
-	private String mSqlParser;
+	private String mSqlParser;  //parser 分析器 解析器
 	private List<Class<? extends Model>> mModelClasses;
 	private List<Class<? extends TypeSerializer>> mTypeSerializers;
 	private int mCacheSize;
-
-	//////////////////////////////////////////////////////////////////////////////////////
-	// CONSTRUCTORS
-	//////////////////////////////////////////////////////////////////////////////////////
-
 	private Configuration(Context context) {
 		mContext = context;
 	}
-
-	//////////////////////////////////////////////////////////////////////////////////////
-	// PUBLIC METHODS
-	//////////////////////////////////////////////////////////////////////////////////////
 
 	public Context getContext() {
 		return mContext;
@@ -83,15 +54,7 @@ public class Configuration {
 		return mModelClasses != null && mModelClasses.size() > 0;
 	}
 
-	//////////////////////////////////////////////////////////////////////////////////////
-	// INNER CLASSES
-	//////////////////////////////////////////////////////////////////////////////////////
-
 	public static class Builder {
-		//////////////////////////////////////////////////////////////////////////////////////
-		// PRIVATE CONSTANTS
-		//////////////////////////////////////////////////////////////////////////////////////
-
 		private static final String AA_DB_NAME = "AA_DB_NAME";
 		private static final String AA_DB_VERSION = "AA_DB_VERSION";
 		private final static String AA_MODELS = "AA_MODELS";
@@ -102,10 +65,6 @@ public class Configuration {
 		private static final String DEFAULT_DB_NAME = "Application.db";
 		private static final String DEFAULT_SQL_PARSER = SQL_PARSER_LEGACY;
 
-		//////////////////////////////////////////////////////////////////////////////////////
-		// PRIVATE MEMBERS
-		//////////////////////////////////////////////////////////////////////////////////////
-
 		private Context mContext;
 
 		private Integer mCacheSize;
@@ -114,19 +73,10 @@ public class Configuration {
 		private String mSqlParser;
 		private List<Class<? extends Model>> mModelClasses;
 		private List<Class<? extends TypeSerializer>> mTypeSerializers;
-
-		//////////////////////////////////////////////////////////////////////////////////////
-		// CONSTRUCTORS
-		//////////////////////////////////////////////////////////////////////////////////////
-
 		public Builder(Context context) {
 			mContext = context.getApplicationContext();
 			mCacheSize = DEFAULT_CACHE_SIZE;
 		}
-
-		//////////////////////////////////////////////////////////////////////////////////////
-		// PUBLIC METHODS
-		//////////////////////////////////////////////////////////////////////////////////////
 
 		public Builder setCacheSize(int cacheSize) {
 			mCacheSize = cacheSize;
@@ -241,12 +191,6 @@ public class Configuration {
 
 			return configuration;
 		}
-
-		//////////////////////////////////////////////////////////////////////////////////////
-		// PRIVATE METHODS
-		//////////////////////////////////////////////////////////////////////////////////////
-
-		// Meta-data methods
 
 		private String getMetaDataDatabaseNameOrDefault() {
 			String aaName = ReflectionUtils.getMetaData(mContext, AA_DB_NAME);
