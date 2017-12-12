@@ -23,6 +23,7 @@ public class MainActivity extends BaseActivity implements View.OnClickListener{
         findViewById(R.id.tv_layout_present).setOnClickListener(this);
         findViewById(R.id.tv_install_list).setOnClickListener(this);
         findViewById(R.id.tv_cubic_bezier).setOnClickListener(this);
+        findViewById(R.id.tv_card_slide).setOnClickListener(this);
     }
 
     private void testLayoutParams(){
@@ -54,12 +55,6 @@ public class MainActivity extends BaseActivity implements View.OnClickListener{
                 break;
 
             case R.id.tv_install_list:
-//                Intent intent_install = new Intent(MainActivity.this, InstallPackageNameActivity.class);
-//                startActivity(intent_install);
-
-//                Intent intent_parcelable = new Intent(MainActivity.this, ParcelableActivity.class);
-//                startActivity(intent_parcelable);
-
                 Intent intent_bezier = new Intent(MainActivity.this, BezierQuadShowActivity.class);
                 startActivity(intent_bezier);
                 break;
@@ -69,6 +64,9 @@ public class MainActivity extends BaseActivity implements View.OnClickListener{
                 startActivity(intent_cubic);
                 break;
 
+            case R.id.tv_card_slide:
+                startActivity(new Intent(MainActivity.this, CardSlideActivity.class));
+                break;
             default:
                 break;
         }

@@ -5,4 +5,11 @@
         <attr name="imageViewWidth" format="dimension"></attr>
         <attr name="imageViewHeigth" format="dimension"></attr>
     </declare-styleable>
+
+    <declare-styleable name="card">
+        <attr name="itemMarginTop" format="dimension" />
+        <attr name="bottomMarginTop" format="dimension" />
+        <attr name="yOffsetStep" format="dimension" />
+        <attr name="widthHeightRate" format="float" />
+    </declare-styleable>
 </resources>
