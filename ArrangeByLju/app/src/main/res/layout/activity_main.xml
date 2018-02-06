@@ -1,81 +1,132 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
+<ScrollView
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/color_FF072D3C"
-    android:orientation="vertical"
     tools:context="com.dayu.singapp.activity.MainActivity">
 
-    <TextView
-        android:id="@+id/tv_action_heart"
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textSize="20sp"
-        android:minHeight="60dp"
-        android:gravity="center"
-        android:background="@color/btn_green"
-        android:text="@string/ui_control_heart_view"
-        android:textColor="@color/white"/>
+        android:background="@color/color_FF072D3C"
+        android:orientation="vertical">
 
-    <TextView
-        android:id="@+id/tv_layout_param"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:minHeight="60dp"
-        android:textSize="20sp"
-        android:text="LayoutParams"
-        android:gravity="center"
-        android:background="@color/btn_green"
-        android:textColor="@color/white"/>
+        <TextView
+            android:id="@+id/tv_action_heart"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="20sp"
+            android:minHeight="60dp"
+            android:gravity="center"
+            android:background="@color/btn_green"
+            android:text="@string/ui_control_heart_view"
+            android:textColor="@color/white"/>
 
-    <TextView
-        android:id="@+id/tv_layout_present"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:minHeight="60dp"
-        android:textSize="20sp"
-        android:text="Rush Present"
-        android:gravity="center"
-        android:background="@color/btn_green"
-        android:textColor="@color/white"/>
+        <TextView
+            android:id="@+id/tv_layout_param"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="60dp"
+            android:textSize="20sp"
+            android:text="LayoutParams"
+            android:gravity="center"
+            android:background="@color/btn_green"
+            android:textColor="@color/white"/>
 
-    <com.dayu.singapp.view.ViewConstructor
-        android:layout_width="20dp"
-        android:layout_height="20dp"
-        android:background="@color/red"/>
+        <TextView
+            android:id="@+id/tv_layout_present"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="60dp"
+            android:textSize="20sp"
+            android:text="Rush Present"
+            android:gravity="center"
+            android:background="@color/btn_green"
+            android:textColor="@color/white"/>
 
-    <TextView
-        android:id="@+id/tv_install_list"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:minHeight="60dp"
-        android:textSize="20sp"
-        android:text="Quad Bezier"
-        android:gravity="center"
-        android:background="@color/btn_green"
-        android:textColor="@color/white"/>
+        <com.dayu.singapp.view.ViewConstructor
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:background="@color/red"/>
 
-    <TextView
-        android:id="@+id/tv_cubic_bezier"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:minHeight="60dp"
-        android:textSize="20sp"
-        android:text="Cubic Bezier"
-        android:gravity="center"
-        android:background="@color/btn_green"
-        android:textColor="@color/white"/>
+        <TextView
+            android:id="@+id/tv_install_list"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="60dp"
+            android:textSize="20sp"
+            android:text="Quad Bezier"
+            android:gravity="center"
+            android:background="@color/btn_green"
+            android:textColor="@color/white"/>
 
-    <TextView
-        android:id="@+id/tv_card_slide"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:minHeight="60dp"
-        android:textSize="20sp"
-        android:text="Card Slide"
-        android:gravity="center"
-        android:background="@color/btn_green"
-        android:textColor="@color/white"/>
-</LinearLayout>
+        <TextView
+            android:id="@+id/tv_cubic_bezier"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="60dp"
+            android:textSize="20sp"
+            android:text="Cubic Bezier"
+            android:gravity="center"
+            android:background="@color/btn_green"
+            android:textColor="@color/white"/>
+
+        <TextView
+            android:id="@+id/tv_card_slide"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="60dp"
+            android:textSize="20sp"
+            android:text="Card Slide"
+            android:gravity="center"
+            android:background="@color/btn_green"
+            android:textColor="@color/white"/>
+
+        <TextView
+            android:id="@+id/tv_card_calendar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="60dp"
+            android:textSize="20sp"
+            android:text="Calendar"
+            android:gravity="center"
+            android:background="@color/btn_green"
+            android:textColor="@color/white"/>
+
+        <TextView
+            android:id="@+id/tv_card_lottie"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="60dp"
+            android:textSize="20sp"
+            android:text="Lottie"
+            android:gravity="center"
+            android:background="@color/btn_green"
+            android:textColor="@color/white"/>
+
+        <TextView
+            android:id="@+id/tv_card_calculator"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="60dp"
+            android:textSize="20sp"
+            android:text="Calculator"
+            android:gravity="center"
+            android:background="@color/btn_green"
+            android:textColor="@color/white"/>
+
+
+        <TextView
+            android:id="@+id/tv_card_recycle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="60dp"
+            android:textSize="20sp"
+            android:text="Circle_Recycler"
+            android:gravity="center"
+            android:background="@color/btn_green"
+            android:textColor="@color/white"/>
+    </LinearLayout>
+
+</ScrollView>

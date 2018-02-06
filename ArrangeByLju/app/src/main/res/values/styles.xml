@@ -3,4 +3,212 @@
     <style name="AppTheme" parent="android:Theme.Light.NoTitleBar">
         <!-- Customize your theme here. -->
     </style>
+
+
+    <style name="TextAppearance.MaterialCalendarWidget.Header"
+        parent="android:TextAppearance.DeviceDefault.Small">
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="TextAppearance.MaterialCalendarWidget.Date"
+        parent="android:TextAppearance.DeviceDefault.Small">
+        <item name="android:textSize">12sp</item>
+        <item name="android:textColor">@color/mcv_text_date_light</item>
+    </style>
+
+    <style name="TextAppearance.MaterialCalendarWidget.WeekDay"
+        parent="android:TextAppearance.DeviceDefault.Small">
+        <item name="android:textSize">12sp</item>
+    </style>
+
+    <style name="CalculatorTheme" parent="@android:style/Theme.Material.Light.NoActionBar">
+        <item name="android:colorPrimary">@color/calculator_accent_color</item>
+        <item name="android:navigationBarColor">@android:color/black</item>
+        <item name="android:statusBarColor">@color/calculator_accent_color</item>
+        <item name="android:windowContentOverlay">@null</item>
+    </style>
+
+    <style name="DisplayEditTextStyle" parent="@android:style/Widget.Material.Light.EditText">
+        <item name="android:background">@android:color/transparent</item>
+        <item name="android:cursorVisible">false</item>
+        <item name="android:fontFamily">sans-serif-light</item>
+        <item name="android:includeFontPadding">false</item>
+        <item name="android:gravity">bottom|end</item>
+    </style>
+
+    <style name="PadButtonStyle" parent="@android:style/Widget.Material.Light.Button.Borderless">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:background">@drawable/pad_button_background</item>
+        <item name="android:fontFamily">sans-serif-light</item>
+        <item name="android:gravity">center</item>
+        <item name="android:includeFontPadding">false</item>
+        <item name="android:minWidth">0dip</item>
+        <item name="android:minHeight">0dip</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:textColor">@color/pad_button_text_color</item>
+    </style>
+
+    <style name="PadLayoutStyle">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+    </style>
+
+
+    <style name="DisplayEditTextStyle.Formula">
+        <item name="android:paddingTop">72dip</item>
+        <item name="android:paddingBottom">32dip</item>
+        <item name="android:paddingStart">44dip</item>
+        <item name="android:paddingEnd">44dip</item>
+        <item name="minTextSize">48sp</item>
+        <item name="maxTextSize">80sp</item>
+        <item name="stepTextSize">8sp</item>
+    </style>
+
+    <style name="DisplayEditTextStyle.Result">
+        <item name="android:paddingTop">32dip</item>
+        <item name="android:paddingBottom">90dip</item>
+        <item name="android:paddingStart">44dip</item>
+        <item name="android:paddingEnd">44dip</item>
+        <item name="android:textSize">48sp</item>
+    </style>
+
+    <style name="PadButtonStyle.Advanced">
+        <item name="android:layout_marginTop">8dip</item>
+        <item name="android:layout_marginBottom">8dip</item>
+        <item name="android:layout_marginStart">12dip</item>
+        <item name="android:layout_marginEnd">12dip</item>
+        <item name="android:background">@drawable/pad_button_advanced_background</item>
+        <item name="android:textColor">@color/pad_button_advanced_text_color</item>
+        <item name="android:textSize">27sp</item>
+    </style>
+
+    <style name="PadButtonStyle.Numeric">
+        <item name="android:layout_margin">8dip</item>
+        <item name="android:textSize">36sp</item>
+    </style>
+
+    <style name="PadButtonStyle.Numeric.Equals">
+        <item name="android:visibility">gone</item>
+    </style>
+
+    <style name="PadButtonStyle.Operator">
+        <item name="android:layout_marginTop">8dip</item>
+        <item name="android:layout_marginBottom">8dip</item>
+        <item name="android:layout_marginStart">16dip</item>
+        <item name="android:layout_marginEnd">16dip</item>
+        <item name="android:textSize">36sp</item>
+    </style>
+
+    <style name="PadButtonStyle.Operator.Text">
+        <item name="android:textAllCaps">true</item>
+        <item name="android:textSize">24sp</item>
+    </style>
+
+    <style name="PadLayoutStyle.Advanced">
+        <item name="android:layout_height">0dip</item>
+        <item name="android:layout_weight">256</item>
+        <item name="android:paddingTop">8dip</item>
+        <item name="android:paddingBottom">8dip</item>
+        <item name="android:paddingStart">16dip</item>
+        <item name="android:paddingEnd">16dip</item>
+        <item name="android:columnCount">6</item>
+        <item name="android:rowCount">2</item>
+    </style>
+
+    <style name="PadLayoutStyle.Numeric">
+        <item name="android:layout_width">0dip</item>
+        <item name="android:layout_weight">532</item>
+        <item name="android:paddingTop">8dip</item>
+        <item name="android:paddingBottom">8dip</item>
+        <item name="android:paddingStart">16dip</item>
+        <item name="android:paddingEnd">16dip</item>
+    </style>
+
+    <style name="PadLayoutStyle.Operator">
+        <item name="android:layout_width">0dip</item>
+        <item name="android:layout_weight">240</item>
+        <item name="android:paddingTop">8dip</item>
+        <item name="android:paddingBottom">8dip</item>
+        <item name="android:paddingStart">0dip</item>
+        <item name="android:paddingEnd">8dip</item>
+    </style>
+
+    <style name="PadLinearLayoutStyle">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">0dip</item>
+        <item name="android:layout_weight">508</item>
+    </style>
+
+    <style name="pop" parent="android:Animation">
+        <item name="android:windowEnterAnimation">@anim/pop_in</item>
+        <item name="android:windowExitAnimation">@anim/pop_out</item>
+    </style>
+
+    <style name="fade" parent="android:Animation">
+        <item name="android:windowEnterAnimation">@android:anim/fade_in</item>
+        <item name="android:windowExitAnimation">@android:anim/fade_out</item>
+    </style>
+
+    <style name="fade_and_pop" parent="android:Animation">
+        <item name="android:windowEnterAnimation">@anim/fade_and_pop_in</item>
+        <item name="android:windowExitAnimation">@anim/fade_and_pop_out</item>
+    </style>
+
+    <style name="scale" parent="android:Animation">
+        <item name="android:windowEnterAnimation">@anim/scale_in</item>
+        <item name="android:windowExitAnimation">@anim/scale_out</item>
+    </style>
+
+    <style name="fade_and_scale" parent="android:Animation">
+        <item name="android:windowEnterAnimation">@anim/fade_and_scale_in</item>
+        <item name="android:windowExitAnimation">@anim/fade_and_scale_out</item>
+    </style>
+
+    <style name="fade75" parent="android:Animation">
+        <item name="android:windowEnterAnimation">@anim/fade75_in</item>
+        <item name="android:windowExitAnimation">@anim/fade75_out</item>
+    </style>
+
+    <style name="fade75_and_pop" parent="android:Animation">
+        <item name="android:windowEnterAnimation">@anim/fade75_and_pop_in</item>
+        <item name="android:windowExitAnimation">@anim/fade75_and_pop_out</item>
+    </style>
+
+    <style name="fade75_and_scale" parent="android:Animation">
+        <item name="android:windowEnterAnimation">@anim/fade75_and_scale_in</item>
+        <item name="android:windowExitAnimation">@anim/fade75_and_scale_out</item>
+    </style>
+
+    <style name="instantin_popout" parent="android:Animation">
+        <item name="android:windowExitAnimation">@anim/pop_out</item>
+    </style>
+
+    <style name="instantin_fadeout" parent="android:Animation">
+        <item name="android:windowExitAnimation">@android:anim/fade_out</item>
+    </style>
+
+    <style name="instantin_scaleout" parent="android:Animation">
+        <item name="android:windowExitAnimation">@anim/scale_out</item>
+    </style>
+
+    <style name="instantin_fade_and_popout" parent="android:Animation">
+        <item name="android:windowExitAnimation">@anim/fade_and_pop_out</item>
+    </style>
+
+    <style name="instantin_fade_and_scaleout" parent="android:Animation">
+        <item name="android:windowExitAnimation">@anim/fade_and_scale_out</item>
+    </style>
+
+    <style name="instantin_fade75out" parent="android:Animation">
+        <item name="android:windowExitAnimation">@anim/fade75_out</item>
+    </style>
+
+    <style name="instantin_fade75_and_popout" parent="android:Animation">
+        <item name="android:windowExitAnimation">@anim/fade75_and_pop_out</item>
+    </style>
+
+    <style name="instantin_fade75_and_scaleout" parent="android:Animation">
+        <item name="android:windowExitAnimation">@anim/fade75_and_scale_out</item>
+    </style>
 </resources>

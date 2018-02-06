@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_1C2249">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/light_btn_open"
+            android:background="@mipmap/icon_switch_close"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/button_switch_close"
+            android:scaleType="center"
+            android:layout_centerInParent="true" />
+
+        <com.dayu.singapp.view.CenterControlButton
+            android:id="@+id/control_layout"
+            android:visibility="gone"
+            android:clipToPadding="false"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true">
+
+            <FrameLayout
+                android:id="@+id/wheel_deis_layout"
+                android:padding="25dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true">
+
+                <ImageView
+                    android:id="@+id/wheel_deis_back"
+                    android:padding="5dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@mipmap/icon_wheel_back" />
+
+                <com.dayu.singapp.view.CenterImageView
+                    android:id="@+id/center_wheel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@mipmap/icon_flash_index" />
+
+                <ImageView
+                    android:id="@+id/wheel_deis_index"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:src="@mipmap/icon_wheel_index" />
+            </FrameLayout>
+
+            <ImageView
+                android:id="@+id/light_btn_close"
+                android:visibility="visible"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/button_switch_open"
+                android:layout_centerInParent="true" />
+        </com.dayu.singapp.view.CenterControlButton>
+
+    </RelativeLayout>
+</LinearLayout>

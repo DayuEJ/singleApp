@@ -12,4 +12,146 @@
         <attr name="yOffsetStep" format="dimension" />
         <attr name="widthHeightRate" format="float" />
     </declare-styleable>
+
+
+    <declare-styleable name="MaterialCalendarView">
+
+        <attr name="mcv_dateTextAppearance" format="reference" />
+        <attr name="mcv_weekDayTextAppearance" format="reference" />
+        <attr name="mcv_headerTextAppearance" format="reference" />
+
+        <attr name="mcv_arrowColor" format="color" />
+        <attr name="mcv_leftArrowMask" format="reference" />
+        <attr name="mcv_rightArrowMask" format="reference" />
+        <attr name="mcv_selectionColor" format="color" />
+
+        <attr name="mcv_showOtherDates" format="integer">
+            <flag name="none" value="0" />
+            <flag name="other_months" value="1" />
+            <flag name="out_of_range" value="2" />
+            <flag name="decorated_disabled" value="4" />
+            <flag name="defaults" value="4" />
+            <flag name="all" value="7" />
+        </attr>
+
+        <attr name="mcv_allowClickDaysOutsideCurrentMonth" format="boolean" />
+
+        <attr name="mcv_weekDayLabels" format="reference" />
+        <attr name="mcv_monthLabels" format="reference" />
+
+        <!-- We want to accept match_parent but not wrap_content. It'd be better if we could
+        point to the real match_parent constant, but since it hasn't change since API 1,
+        I think it's safe to hardcode it-->
+        <attr name="mcv_tileSize" format="dimension" >
+            <enum name="match_parent" value="-1" />
+        </attr>
+        <attr name="mcv_tileHeight" format="dimension" >
+            <enum name="match_parent" value="-1" />
+        </attr>
+        <attr name="mcv_tileWidth" format="dimension" >
+            <enum name="match_parent" value="-1" />
+        </attr>
+
+        <attr name="mcv_firstDayOfWeek" format="enum">
+            <enum name="sunday" value="1" />
+            <enum name="monday" value="2" />
+            <enum name="tuesday" value="3" />
+            <enum name="wednesday" value="4" />
+            <enum name="thursday" value="5" />
+            <enum name="friday" value="6" />
+            <enum name="saturday" value="7" />
+        </attr>
+
+        <attr name="mcv_calendarMode" format="enum">
+            <enum name="month" value="0" />
+            <enum name="week" value="1" />
+        </attr>
+
+        <attr name="mcv_titleAnimationOrientation" format="enum">
+            <enum name="vertical" value="0" />
+            <enum name="horizontal" value="1" />
+        </attr>
+    </declare-styleable>
+
+    <declare-styleable name="CalculatorEditText">
+        <attr name="minTextSize" format="dimension" />
+        <attr name="maxTextSize" format="dimension" />
+        <attr name="stepTextSize" format="dimension" />
+    </declare-styleable>
+
+    <declare-styleable name="Knob">
+        <attr name="kNumberOfStates" format="integer"/>
+        <attr name="kDefaultState" format="integer"/>
+
+        <attr name="kBorderWidth" format="dimension"/>
+        <attr name="kBorderColor" format="reference|color"/>
+
+        <attr name="kIndicatorWidth" format="dimension"/>
+        <attr name="kIndicatorColor" format="reference|color"/>
+        <attr name="kIndicatorRelativeLength" format="float"/>
+
+        <attr name="kCircularIndicatorRelativeRadius" format="float"/>
+        <attr name="kCircularIndicatorRelativePosition" format="float"/>
+        <attr name="kCircularIndicatorColor" format="reference|color" />
+
+        <attr name="kKnobColor" format="reference|color"/>
+        <attr name="kKnobRelativeRadius" format="float"/>
+
+        <attr name="kKnobCenterColor" format="reference|color"/>
+        <attr name="kKnobCenterRelativeRadius" format="float"/>
+
+        <attr name="kKnobDrawable" format="integer"/>
+        <attr name="kKnobDrawableRotates" format="boolean"/>
+
+        <attr name="kStateMarkersWidth" format="dimension"/>
+        <attr name="kStateMarkersColor" format="reference|color"/>
+        <attr name="kStateMarkersRelativeLength" format="float"/>
+        <attr name="kSelectedStateMarkerColor" format="reference|color"/>
+        <attr name="kSelectedStateMarkerContinuous" format="boolean"/>
+
+        <attr name="kAnimation" format="boolean"/>
+        <attr name="kAnimationSpeed" format="float"/>
+        <attr name="kAnimationBounciness" format="float"/>
+
+        <attr name="kSwipe">
+            <enum name="off" value="0"/>
+            <enum name="vertical" value="1"/>
+            <enum name="horizontal" value="2"/>
+            <enum name="vertical_horizontal" value="3"/>
+            <enum name="circular" value="4"/>
+        </attr>
+        <attr name="kSwipeSensitivityPixels" format="integer" />
+
+        <attr name="kFreeRotation" format="boolean" />
+        <attr name="kMinAngle" format="float"/>
+        <attr name="kMaxAngle" format="float"/>
+
+        <attr name="kStateMarkersAccentWidth" format="dimension"/>
+        <attr name="kStateMarkersAccentColor" format="reference|color"/>
+        <attr name="kStateMarkersAccentRelativeLength" format="float"/>
+        <attr name="kStateMarkersAccentPeriodicity" format="integer"/>
+
+        <attr name="kShowBalloonValues" format="boolean"/>
+        <attr name="kBalloonValuesTimeToLive" format="integer"/>
+        <attr name="kBalloonValuesRelativePosition" format="float"/>
+        <attr name="kBalloonValuesTextSize" format="dimension"/>
+        <attr name="kBalloonValuesAnimation">
+            <enum name="pop" value="0"/>
+            <enum name="scale" value="1"/>
+            <enum name="fade" value="2"/>
+        </attr>
+        <attr name="kBalloonValuesArray" format="reference"/>
+        <attr name="kBalloonValuesSlightlyTransparent" format="boolean"/>
+
+        <attr name="kClickBehaviour">
+            <enum name="nothing" value = "0"/>
+            <enum name="next" value = "1"/>
+            <enum name="prev" value = "2"/>
+            <enum name="revert" value = "3"/>
+            <enum name="menu" value = "4" />
+            <enum name="user" value = "5" />
+        </attr>
+
+        <attr name="kEnabled" format="boolean"/>
+    </declare-styleable>
 </resources>

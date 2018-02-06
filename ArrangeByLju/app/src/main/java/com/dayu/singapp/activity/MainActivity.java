@@ -4,10 +4,11 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.LinearLayout;
 import com.dayu.singapp.R;
+import com.dayu.singapp.calculator.Calculator;
 import com.dayu.singapp.util.DeviceUtil;
 
 public class MainActivity extends BaseActivity implements View.OnClickListener{
-    private final String TAG = "MainActivity";
+    private final String TAG = "TestActivity";
     private final int REQUEST_SHOW_ACCESSIBILITY_SETTINGS = 1586;
 
     @Override
@@ -24,6 +25,10 @@ public class MainActivity extends BaseActivity implements View.OnClickListener{
         findViewById(R.id.tv_install_list).setOnClickListener(this);
         findViewById(R.id.tv_cubic_bezier).setOnClickListener(this);
         findViewById(R.id.tv_card_slide).setOnClickListener(this);
+        findViewById(R.id.tv_card_calendar).setOnClickListener(this);
+        findViewById(R.id.tv_card_lottie).setOnClickListener(this);
+        findViewById(R.id.tv_card_calculator).setOnClickListener(this);
+        findViewById(R.id.tv_card_recycle).setOnClickListener(this);
     }
 
     private void testLayoutParams(){
@@ -67,6 +72,23 @@ public class MainActivity extends BaseActivity implements View.OnClickListener{
             case R.id.tv_card_slide:
                 startActivity(new Intent(MainActivity.this, CardSlideActivity.class));
                 break;
+
+            case R.id.tv_card_calendar:
+                startActivity(new Intent(MainActivity.this, CalendarShowActivity.class));
+                break;
+
+            case R.id.tv_card_lottie:
+                startActivity(new Intent(MainActivity.this, LottieShowActivity.class));
+                break;
+
+            case R.id.tv_card_calculator:
+                startActivity(new Intent(MainActivity.this, Calculator.class));
+                break;
+
+            case R.id.tv_card_recycle:
+                startActivity(new Intent(MainActivity.this, CenterControlActivity.class));
+                break;
+
             default:
                 break;
         }

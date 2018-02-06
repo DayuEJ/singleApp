@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center">
+
+    <com.dayu.singapp.view.Knob
+        android:layout_width="180dp"
+        android:layout_height="180dp"
+        app:kClickBehaviour="menu"
+        app:kAnimationBounciness="1"
+        app:kAnimationSpeed="0"
+        app:kBalloonValuesAnimation="scale"
+        app:kBalloonValuesRelativePosition="0"
+        app:kBalloonValuesSlightlyTransparent="false"
+        app:kBalloonValuesTextSize="6sp"
+        app:kBalloonValuesTimeToLive="0"
+        app:kBorderWidth="0dp"
+        app:kFreeRotation="true"
+        app:kIndicatorWidth="0dp"
+        app:kKnobDrawable="@mipmap/knob2"
+        app:kKnobDrawableRotates="true"
+        app:kNumberOfStates="6"
+        app:kSelectedStateMarkerColor="@color/transparent_500"
+        app:kShowBalloonValues="true"
+        app:kStateMarkersAccentColor="@color/transparent_500"
+        app:kStateMarkersAccentPeriodicity="3"
+        app:kStateMarkersRelativeLength="0"
+        app:kSwipe="circular"
+        app:kStateMarkersWidth="1dp" />
+
+</LinearLayout>

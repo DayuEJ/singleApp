@@ -64,6 +64,14 @@ public final class Cache {
 		return sDatabaseHelper.getWritableDatabase();
 	}
 
+	//SQLiteDatabase getReadableDatabase( )和getWritableDatabase( )  这两种方法又什么区别：
+    //    共同点：
+    //    打开数据库，如果数据库不存在，先创建再打开
+    //            返回操作数据库的SQLiteDatabase对象
+    //    都是以读写方式（创建并）打开
+    //    区别：
+    //    如果磁盘满了，getWritableDatabase 会出错 但是getReadableDatabase不会出错 但是打开数据库是只能读不能写
+
 	public static synchronized void closeDatabase() {
 		sDatabaseHelper.close();
 	}
@@ -84,6 +92,7 @@ public final class Cache {
 		return getIdentifier(entity.getClass(), entity.getId());
 	}
 
+	//entity 实体 统一体
 	public static synchronized void addEntity(Model entity) {
 		sEntities.put(getIdentifier(entity), entity);
 	}
