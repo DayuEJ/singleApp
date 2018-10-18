@@ -29,13 +29,22 @@ import com.dayu.singapp.util.DeviceUtil;
 //listener C1935d
 public class CenterImageView extends AppCompatImageView  {
     private static final String[] mScaleInfo = new String[]{"0", "1", "2", "3", "4", "SOS"};//f6489b
-    private int f6490a;
+    private int mScaleSize;
     private float degree;//f6491c
 //    private C1952g f6492d;
     private Paint mPaint;
-    private int f6494f;
+    private int mSelectIndex;
     private int textSize;//f6495g;
     private int f6496h;
+    private LightScaleChange mCallBack;
+
+    public interface LightScaleChange{
+        void scaleChange(int scale);
+    }
+
+    public void setScaleChangeListener(LightScaleChange listener){
+        this.mCallBack = listener;
+    }
 
 //    class C20212 extends C1979a {
 //        final CenterImageView f6487a;
@@ -45,7 +54,7 @@ public class CenterImageView extends AppCompatImageView  {
 //        }
 //
 //        public void onAnimationEnd(Animator animator) {
-//            this.f6487a.f6494f = 0;
+//            this.f6487a.mSelectIndex = 0;
 //            this.f6487a.invalidate();
 //        }
 //    }
@@ -68,9 +77,9 @@ public class CenterImageView extends AppCompatImageView  {
 
     public CenterImageView(Context context) {
         super(context);
-        this.f6490a = 6;
+        this.mScaleSize = mScaleInfo.length;
         this.degree = 0.0f;
-        this.f6494f = 0;
+        this.mSelectIndex = 0;
         this.f6496h = -1;
     }
 
@@ -80,25 +89,23 @@ public class CenterImageView extends AppCompatImageView  {
 
     public CenterImageView(Context context, AttributeSet attributeSet, int defStyleAttr) {
         super(context, attributeSet, defStyleAttr);
-        this.f6490a = 6;
+        this.mScaleSize = mScaleInfo.length;
         this.degree = 0.0f;
-        this.f6494f = 0;
+        this.mSelectIndex = 0;
         this.f6496h = -1;
-        m10803a();
+        init();
     }
 
     protected void onFinishInflate() {
         super.onFinishInflate();
     }
 
-    public void m10803a() {
-        DeviceUtil.px2sp(16.0f);
-//        this.textSize = C1920a.m10402a(16.0f);//DeviceUtil
-        this.textSize = DeviceUtil.px2sp(16.0f);
-        this.degree = (float) (360 / this.f6490a);
-        this.mPaint = new Paint(1);
-        this.mPaint.setTextSize((float) textSize);
-        this.mPaint.setTextAlign(Align.CENTER);
+    public void init() {
+        textSize = DeviceUtil.dp2Px(16);
+        degree = (float) (360 / this.mScaleSize);
+        mPaint = new Paint(1);
+        mPaint.setTextSize((float) textSize);
+        mPaint.setTextAlign(Align.CENTER);
     }
 
     public void setModul(final int i) {
@@ -107,8 +114,8 @@ public class CenterImageView extends AppCompatImageView  {
 //            CenterImageView f6486b;
 //
 //            public void onAnimationEnd(Animator animator) {
-////                this.f6486b.m10797b(this.f6486b.f6490a - i);
-//                this.f6486b.f6494f = this.f6486b.f6490a - i;
+////                this.f6486b.m10797b(this.f6486b.mScaleSize - i);
+//                this.f6486b.mSelectIndex = this.f6486b.mScaleSize - i;
 //                this.f6486b.invalidate();
 //            }
 //        });
@@ -121,7 +128,8 @@ public class CenterImageView extends AppCompatImageView  {
 
             @Override
             public void onAnimationEnd(Animator animation) {
-                f6494f = f6490a - i;
+                mSelectIndex = mScaleSize - i;
+                updateScale(mSelectIndex);
                 invalidate();
             }
 
@@ -144,13 +152,13 @@ public class CenterImageView extends AppCompatImageView  {
         super.onDraw(canvas);
         int width = canvas.getWidth();
         int height = canvas.getHeight();
-        for (int i = 0; i < this.f6490a; i++) {
-            if (i == this.f6490a - 1) {
+        for (int i = 0; i < this.mScaleSize; i++) {
+            if (i == this.mScaleSize - 1) {
                 this.mPaint.setColor(getResources().getColor(R.color.red));
             } else {
                 this.mPaint.setColor(-1);
             }
-            if (i == this.f6494f) {
+            if (i == this.mSelectIndex) {
                 this.mPaint.setTextSize((float) textSize);
             } else {
                 this.mPaint.setTextSize((float) textSize);
@@ -245,7 +253,8 @@ public class CenterImageView extends AppCompatImageView  {
 
             @Override
             public void onAnimationEnd(Animator animation) {
-                f6494f = 0;
+                mSelectIndex = 0;
+                updateScale(mSelectIndex);
                 invalidate();
             }
 
@@ -271,7 +280,7 @@ public class CenterImageView extends AppCompatImageView  {
         if (f2 < 0.0f) {
             f2 += 360.0f;
         }
-        for (int i = 0; i < this.f6490a; i++) {
+        for (int i = 0; i < this.mScaleSize; i++) {
             if (i != 0) {
                 float f3 = (this.degree * ((float) i)) + (this.degree / 2.0f);
                 if (f2 >= (this.degree * ((float) (i - 1))) + (this.degree / 2.0f) && f2 <= f3) {
@@ -288,21 +297,21 @@ public class CenterImageView extends AppCompatImageView  {
     public void setRotationDegree(float f) {
         setRotation(f);
         if (((double) (f % this.degree)) < ((double) this.degree) * 0.2d || ((double) (f % this.degree)) > ((double) this.degree) * 0.8d) {
-            this.f6494f = Math.round(((float) this.f6490a) - (f / this.degree)) % 6;
-            if (this.f6496h != this.f6494f) {
+            this.mSelectIndex = Math.round(((float) this.mScaleSize) - (f / this.degree)) % 6;
+            if (this.f6496h != this.mSelectIndex) {
 //                C1931g.m10470a().m10471a(45, getContext());//// FIXME: 2018/2/5 virbate
-                this.f6496h = this.f6494f;
+                this.f6496h = this.mSelectIndex;
             }
             invalidate();
             return;
         }
         this.f6496h = -1;
-        this.f6494f = -1;
+        this.mSelectIndex = -1;
         invalidate();
     }
 
-    public int getSelectInde() {
-        return this.f6494f;
+    public int getSelectIndex() {
+        return this.mSelectIndex;
     }
 
     public void mo1339a(int i) {
@@ -310,5 +319,11 @@ public class CenterImageView extends AppCompatImageView  {
     }
 
     public void mo1340a(boolean z) {
+    }
+
+    public void updateScale(int scale){
+        if (mCallBack != null){
+            mCallBack.scaleChange(scale);
+        }
     }
 }

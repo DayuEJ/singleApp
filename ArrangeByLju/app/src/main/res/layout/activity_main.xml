@@ -35,15 +35,33 @@
             android:textColor="@color/white"/>
 
         <TextView
-            android:id="@+id/tv_layout_present"
+            android:id="@+id/tv_ipc1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:minHeight="60dp"
             android:textSize="20sp"
-            android:text="Rush Present"
+            android:text="icp1"
             android:gravity="center"
             android:background="@color/btn_green"
             android:textColor="@color/white"/>
+
+        <TextView
+            android:id="@+id/tv_ipc2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="60dp"
+            android:textSize="20sp"
+            android:text="icp2"
+            android:gravity="center"
+            android:background="@color/btn_green"
+            android:textColor="@color/white"/>
+
+        <ImageView
+            android:id="@+id/opengl"
+            android:layout_width="match_parent"
+            android:layout_height="120dp"
+            android:scaleType="fitXY"
+            android:src="@mipmap/ico_card2_bg_bottom"/>
 
         <com.dayu.singapp.view.ViewConstructor
             android:layout_width="20dp"
@@ -124,6 +142,28 @@
             android:minHeight="60dp"
             android:textSize="20sp"
             android:text="Circle_Recycler"
+            android:gravity="center"
+            android:background="@color/btn_green"
+            android:textColor="@color/white"/>
+
+        <TextView
+            android:id="@+id/tv_card_custom_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="60dp"
+            android:textSize="20sp"
+            android:text="Custom_view_one"
+            android:gravity="center"
+            android:background="@color/btn_green"
+            android:textColor="@color/white"/>
+
+        <TextView
+            android:id="@+id/tv_card_canvas"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="60dp"
+            android:textSize="20sp"
+            android:text="Canvas Test"
             android:gravity="center"
             android:background="@color/btn_green"
             android:textColor="@color/white"/>

@@ -4,6 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
+
     <com.dayu.singapp.materialcalendarview.MaterialCalendarView
         xmlns:app="http://schemas.android.com/apk/res-auto"
         android:id="@+id/calendarView"
@@ -13,5 +14,4 @@
         app:mcv_selectionColor="@color/red"
         app:mcv_calendarMode="month"
         app:mcv_titleAnimationOrientation="horizontal"/>
-
 </LinearLayout>

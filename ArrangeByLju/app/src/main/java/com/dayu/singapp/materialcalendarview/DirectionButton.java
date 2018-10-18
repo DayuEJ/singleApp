@@ -9,6 +9,7 @@ import android.widget.ImageView;
 /**
  * An {@linkplain ImageView} to pragmatically set the color of arrows
  * using a {@linkplain android.graphics.ColorFilter}
+ *
  */
 class DirectionButton extends ImageView {
 

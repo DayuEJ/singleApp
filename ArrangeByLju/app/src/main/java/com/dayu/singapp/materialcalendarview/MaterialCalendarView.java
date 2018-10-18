@@ -303,6 +303,7 @@ public class MaterialCalendarView extends ViewGroup {
                     .setCalendarDisplayMode(CalendarMode.values()[calendarModeIndex])
                     .commit();
 
+
             final int tileSize = a.getLayoutDimension(R.styleable.MaterialCalendarView_mcv_tileSize, INVALID_TILE_DIMENSION);
             if (tileSize > INVALID_TILE_DIMENSION) {
                 setTileSize(tileSize);

@@ -3,6 +3,10 @@ package com.dayu.singapp.common;
 import android.app.Application;
 import android.content.Context;
 
+import com.dayu.singapp.manager.BroadReceiverManager;
+import com.dayu.singapp.manager.ServiceManager;
+import com.dayu.singapp.util.BaseUtils;
+
 import java.util.concurrent.ConcurrentLinkedQueue;
 /**
  * Created by zhangjinwei on 2017/5/10.
@@ -11,9 +15,6 @@ import java.util.concurrent.ConcurrentLinkedQueue;
 public class ApplicationEx extends Application {
     private static final String LOG_TAG = "ApplicationEx";
     private static ApplicationEx sInstance;
-
-    //public static LiteOrm liteOrm;
-
     private ConcurrentLinkedQueue<AppListener> mListenerQ = new ConcurrentLinkedQueue<>();
 
     public static ApplicationEx getInstance() {
@@ -28,10 +29,9 @@ public class ApplicationEx extends Application {
     public void onCreate() {
         super.onCreate();
         sInstance = this;
-        init();
-//        if (!EventBus.getDefault().isRegistered(this)) {
-//            EventBus.getDefault().register(this);
-//        }
+        if (BaseUtils.isMainProcess(getInstance())){
+            startInitWork();
+        }
     }
 
     @Override
@@ -44,9 +44,6 @@ public class ApplicationEx extends Application {
     public void onTerminate() {
         super.onTerminate();
         destroy();
-//        if (EventBus.getDefault().isRegistered(this)) {
-//            EventBus.getDefault().unregister(this);
-//        }
     }
 
     @Override
@@ -55,8 +52,6 @@ public class ApplicationEx extends Application {
         // TODO: 2017/5/10
     }
 
-    private void init() {
-    }
 
     private void startInitWork() {
         initSync();
@@ -64,15 +59,12 @@ public class ApplicationEx extends Application {
     }
 
     private void initSync() {
+        BroadReceiverManager.getInstance();
     }
 
     // Async work, controlled by each task.
     private void initAsync() {
-        asyncDownloadGif();
-    }
-
-    private void asyncDownloadGif() {
-        long delay = 0;
+        ServiceManager.startServiceIfNeed(getInstance());
     }
 
     private void destroy() {
@@ -86,11 +78,5 @@ public class ApplicationEx extends Application {
         if (!mListenerQ.contains(listener)) {
             mListenerQ.add(listener);
         }
-    }
-    public static void initImageLoader(Context context) {
-        // This configuration tuning is custom. You can tune every option, you may tune some of them,
-        // or you can create default configuration by
-        //  ImageLoaderConfiguration.createDefault(this);
-        // method.
     }
 }

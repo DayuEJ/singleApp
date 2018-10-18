@@ -154,4 +154,21 @@
 
         <attr name="kEnabled" format="boolean"/>
     </declare-styleable>
+
+    <declare-styleable name="CustomTextView">
+        <attr name="custom_text_size"  format="dimension"/>
+        <attr name="custom_text_color" format="color"/>
+        <attr name="custom_text" format="string"/>
+    </declare-styleable>
+
+    <declare-styleable name="CustomImageView">
+        <attr name="titleText" format="string"/>
+        <attr name="titleTextSize" format="dimension"/>
+        <attr name="titleTextColor" format="color"/>
+        <attr name="image" format="reference"/>
+        <attr name="imageScaleType">
+            <enum name="fillXY" value="0"/>
+            <enum name="center" value="1"/>
+        </attr>
+    </declare-styleable>
 </resources>

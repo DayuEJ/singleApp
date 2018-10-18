@@ -11,7 +11,6 @@ import android.content.Context;
 import android.graphics.Rect;
 import android.util.AttributeSet;
 import android.view.MotionEvent;
-import android.view.View;
 import android.view.animation.OvershootInterpolator;
 import android.widget.FrameLayout;
 import android.widget.ImageView;
@@ -19,11 +18,10 @@ import android.widget.RelativeLayout;
 
 import com.dayu.singapp.R;
 
-public class CenterControlButton extends RelativeLayout implements View.OnClickListener{
+public class CenterControlButton extends RelativeLayout{
     private CenterImageView mCenterImage;//f6472a
     private ImageView mIvWeelBack;
     private ImageView mIvLightClose;
-    private ImageView mIvLightOpen;
     private int mLastX;
     private int mLastY;
     private int mStartX;
@@ -33,7 +31,7 @@ public class CenterControlButton extends RelativeLayout implements View.OnClickL
     private float mCurDegree;//f6481j;
     private boolean f6482k;
     private C1990a f6483l;
-    private FrameLayout f6484m;
+    private FrameLayout mCenterLayout;
 
     public interface C1990a {
         void mo1335a();
@@ -64,24 +62,8 @@ public class CenterControlButton extends RelativeLayout implements View.OnClickL
         mCenterImage = (CenterImageView) findViewById(R.id.center_wheel);
         mIvWeelBack = (ImageView) findViewById(R.id.wheel_deis_back);
         mIvLightClose = (ImageView) findViewById(R.id.light_btn_close);
-        mIvLightOpen = (ImageView) findViewById(R.id.light_btn_open);
-
-        f6484m = (FrameLayout) findViewById(R.id.wheel_deis_layout);
+        mCenterLayout = (FrameLayout) findViewById(R.id.wheel_deis_layout);
         mCurDegree = 0.0f;
-        mIvLightClose.setOnClickListener(this);
-        mIvLightOpen.setOnClickListener(this);
-    }
-
-    @Override
-    public void onClick(View v) {
-        switch (v.getId()){
-            case R.id.light_btn_close:
-                break;
-
-            case R.id.light_btn_open:
-                startOpenLightAnim();
-                break;
-        }
     }
 
     protected void onLayout(boolean z, int i, int i2, int i3, int i4) {
@@ -100,7 +82,7 @@ public class CenterControlButton extends RelativeLayout implements View.OnClickL
                 this.mLastX = (int) motionEvent.getX();
                 this.mLastY = (int) motionEvent.getY();
                 this.mCurDegree = (float) ((int) this.mCenterImage.getRotation());
-                if (!m10785a(mStartX, mStartY)) {
+                if (!isInRange(mStartX, mStartY)) {
                     z = true;
                 }
                 this.f6482k = z;
@@ -138,9 +120,9 @@ public class CenterControlButton extends RelativeLayout implements View.OnClickL
                     i = this.mLastY - this.mStartY;
                 }
                 if (i2 * i2 > i * i) {
-                    m10788a(((float) i2) * 0.3f);
+                    setRotationDegree(((float) i2) * 0.3f);
                 } else {
-                    m10788a(((float) i) * 0.3f);
+                    setRotationDegree(((float) i) * 0.3f);
                 }
                 this.mLastX = mStartX;
                 this.mLastY = mStartY;
@@ -149,16 +131,17 @@ public class CenterControlButton extends RelativeLayout implements View.OnClickL
         return true;
     }
 
-    private boolean m10785a(int i, int i2) {
+    private boolean isInRange(int x, int y) {
         Rect rect = new Rect();
         Rect rect2 = new Rect();
         getDrawingRect(rect2);
         this.mIvLightClose.getDrawingRect(rect);
+        //left top  right bottom
         rect.set((rect2.right - rect.right) / 2, (rect2.bottom - rect.bottom) / 2, ((rect2.right - rect.right) / 2) + rect.right, ((rect2.bottom - rect.bottom) / 2) + rect.bottom);
-        return rect.contains(i, i2);
+        return rect.contains(x, y);
     }
 
-    public void m10788a(float f) {
+    public void setRotationDegree(float f) {
         if (f6482k || Math.abs(f) >= 2.0f) {
             f6482k = true;
             mCurDegree += f;
@@ -173,12 +156,33 @@ public class CenterControlButton extends RelativeLayout implements View.OnClickL
     }
 
     public void startOpenLightAnim() {
-        ObjectAnimator ofFloat = ObjectAnimator.ofFloat(this.f6484m, "scaleX", new float[]{0.0f, 1.0f});
-        ObjectAnimator ofFloat2 = ObjectAnimator.ofFloat(this.f6484m, "scaleY", new float[]{0.0f, 1.0f});
+        ObjectAnimator ofFloat = ObjectAnimator.ofFloat(this.mCenterLayout, "scaleX", new float[]{0.0f, 1.0f});
+        ObjectAnimator ofFloat2 = ObjectAnimator.ofFloat(this.mCenterLayout, "scaleY", new float[]{0.0f, 1.0f});
         AnimatorSet animatorSet = new AnimatorSet();
         animatorSet.playTogether(new Animator[]{ofFloat, ofFloat2});
         animatorSet.setInterpolator(new OvershootInterpolator());
         animatorSet.setDuration(500);
+        animatorSet.addListener(new Animator.AnimatorListener() {
+            @Override
+            public void onAnimationStart(Animator animation) {
+
+            }
+
+            @Override
+            public void onAnimationEnd(Animator animation) {
+                mCenterImage.updateScale(getSelectIndex());
+            }
+
+            @Override
+            public void onAnimationCancel(Animator animation) {
+
+            }
+
+            @Override
+            public void onAnimationRepeat(Animator animation) {
+
+            }
+        });
         animatorSet.start();
     }
 
@@ -187,7 +191,7 @@ public class CenterControlButton extends RelativeLayout implements View.OnClickL
 //    }
 
     public int getSelectIndex() {
-        return this.mCenterImage.getSelectInde();
+        return this.mCenterImage.getSelectIndex();
     }
 
     public void m10790c() {

@@ -3,6 +3,8 @@ package com.dayu.singapp.materialcalendarview;
 import android.support.annotation.NonNull;
 import android.support.v4.util.SparseArrayCompat;
 
+import com.dayu.singapp.calculator.Calculator;
+
 /**
  * Pager adapter backing the calendar view
  */

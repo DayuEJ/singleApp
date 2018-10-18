@@ -1,11 +1,20 @@
 package com.dayu.singapp.activity;
+import android.app.Activity;
+import android.app.ActivityOptions;
 import android.content.Intent;
+import android.os.Build;
 import android.os.Bundle;
+import android.support.v4.app.ActivityCompat;
+import android.util.Pair;
 import android.view.View;
 import android.widget.LinearLayout;
+import android.widget.TextView;
+
 import com.dayu.singapp.R;
+import com.dayu.singapp.activeandroid.Log;
 import com.dayu.singapp.calculator.Calculator;
 import com.dayu.singapp.util.DeviceUtil;
+import com.dayu.singapp.util.LogUtil;
 
 public class MainActivity extends BaseActivity implements View.OnClickListener{
     private final String TAG = "TestActivity";
@@ -19,16 +28,24 @@ public class MainActivity extends BaseActivity implements View.OnClickListener{
     }
 
     private void bindAction(){
-        findViewById(R.id.tv_action_heart).setOnClickListener(this);
-        findViewById(R.id.tv_layout_param).setOnClickListener(this);
-        findViewById(R.id.tv_layout_present).setOnClickListener(this);
-        findViewById(R.id.tv_install_list).setOnClickListener(this);
-        findViewById(R.id.tv_cubic_bezier).setOnClickListener(this);
-        findViewById(R.id.tv_card_slide).setOnClickListener(this);
-        findViewById(R.id.tv_card_calendar).setOnClickListener(this);
-        findViewById(R.id.tv_card_lottie).setOnClickListener(this);
-        findViewById(R.id.tv_card_calculator).setOnClickListener(this);
-        findViewById(R.id.tv_card_recycle).setOnClickListener(this);
+        bindClicks(new int[]{
+                R.id.tv_action_heart,
+                R.id.tv_layout_param,
+                R.id.tv_install_list,
+                R.id.tv_cubic_bezier,
+                R.id.tv_card_slide,
+                R.id.tv_card_calendar,
+                R.id.tv_card_lottie,
+                R.id.tv_card_calculator,
+                R.id.tv_card_recycle,
+                R.id.opengl,
+                R.id.tv_card_canvas
+        }, this);
+    }
+
+    private void openFirstOpengL(){
+        Intent intent = new Intent(MainActivity.this, FirstOpenGLProjectActivity.class);
+        startActivity(intent);
     }
 
     private void testLayoutParams(){
@@ -54,9 +71,11 @@ public class MainActivity extends BaseActivity implements View.OnClickListener{
                 doBackPressed();
                 break;
 
-            case R.id.tv_layout_present:
-                Intent intent_access = new Intent("android.settings.ACCESSIBILITY_SETTINGS");
-                startActivity(intent_access);
+            case R.id.opengl:
+//                openFirstOpengL();
+                v.setTransitionName("test");
+                ActivityOptions options = ActivityOptions.makeSceneTransitionAnimation(this, Pair.create(v, "test"));
+                startActivity(new Intent(this, OptionsAnimStartActivity.class), options.toBundle());
                 break;
 
             case R.id.tv_install_list:
@@ -87,6 +106,10 @@ public class MainActivity extends BaseActivity implements View.OnClickListener{
 
             case R.id.tv_card_recycle:
                 startActivity(new Intent(MainActivity.this, CenterControlActivity.class));
+                break;
+
+            case R.id.tv_card_canvas:
+                startActivity(new Intent(MainActivity.this, CanvasTestActivity.class));
                 break;
 
             default:

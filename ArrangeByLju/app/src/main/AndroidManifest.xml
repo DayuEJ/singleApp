@@ -64,13 +64,39 @@
             android:launchMode="singleTask"
             android:screenOrientation="portrait"/>
 
+        <activity android:name=".activity.CustomTextActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"/>
+
+        <activity android:name=".activity.FirstOpenGLProjectActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"/>
+
+        <activity android:name=".activity.IpcTest1Activity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:process=":hello.world"/>
+
+        <activity android:name=".activity.IpcTest2Activity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:process="com.dayu.singapp.haha"/>
+
+        <activity android:name=".activity.OptionsAnimStartActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"/>
+
+        <activity android:name=".activity.CanvasTestActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"/>
+
         <service android:name=".service.RushPresentService"
             android:process=":service_accessibility"
             android:label = "@string/accessibility_service_label"
             android:permission="android.permission.BIND_ACCESSIBILITY_SERVICE">
             <intent-filter>
                 <action android:name="android.accessibilityservice.AccessibilityService"/>
-            </intent-filter>
+            </intent-filter>\
             <!--辅助配置-->
             <meta-data
                 android:name="android.accessibilityservice"

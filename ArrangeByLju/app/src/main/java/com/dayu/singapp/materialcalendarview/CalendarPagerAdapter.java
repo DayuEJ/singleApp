@@ -67,6 +67,7 @@ abstract class CalendarPagerAdapter<V extends CalendarPagerView> extends PagerAd
         }
     }
 
+
     @Override
     public int getCount() {
         return rangeIndex.getCount();
